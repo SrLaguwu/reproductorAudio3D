@@ -1,8 +1,7 @@
-# React + Vite
+1. Estado hasInteracted: Utilizo un estado llamado hasInteracted para controlar si el usuario ha hecho clic en el botón de inicio. Al inicio, este estado es false, lo que significa que la aplicación mostrará el botón.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Pantalla inicial: Mientras hasInteracted es false, se muestra un botón centrado en la pantalla que dice "Haz clic para comenzar". Cuando el usuario hace clic en el botón, llamo a la función handleStart.
 
-Currently, two official plugins are available:
+3. Función handleStart: Esta función reproduce el audio y cambia el estado hasInteracted a true. Una vez que esto ocurre, la pantalla inicial desaparece y se muestra el contenido del componente como el Canvas y el resto de los elementos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. Reproducción de audio: El audio se reproduce automáticamente cuando el estado cambia y el componente completo se renderiza, permitiendo así cumplir con las políticas de los navegadores que requieren interacción del usuario.
